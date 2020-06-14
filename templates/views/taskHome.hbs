@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Authentication APP</title>
+</head>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Task Manager APP</a>
+  <form action="/users/logout" method="post"class="form-inline">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+</nav>
+
+
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-200 p-8 rounded">
+         <h1 style="text-align: center;">USERS</h1>
+         <form action="/users/me" method="get"class="form-inline">
+    <button class="btn btn-success" type="submit">User Profile </button>
+  </form>
+  <form action="/users/delete/me" method=""class="form-inline">
+    <button class="btn btn-success" type="submit">Delete Profile </button>
+  </form>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-200 p-8 rounded">
+          <h1 style="text-align: center;">TASKS</h1>
+          <form action="/tasks" method="get"class="form-inline">
+    <button class="btn btn-success" type="submit">Read Task </button>
+  </form>
+  <form action="/tasks/create" method="get"class="form-inline">
+    <button class="btn btn-success" type="submit">Create Taskk </button>
+  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</html>
