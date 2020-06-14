@@ -38,8 +38,9 @@ router.post("/users",async (req,res)=>{
 
 
 router.get("/users/me",auth,async (req,res)=>{
-    res.send(req.user)
-   
+    const currUser= req.user
+   // res.send(req.user)
+    res.render("showUser",currUser)
 })
 
 router.get("/users/:name",async (req,res)=>{
@@ -66,7 +67,8 @@ router.patch("/users/me", auth ,async (req,res)=>{
        updates.forEach((update)=> req.user[update]=req.body[update])
        await req.user.save()
         
-        res.send(req.user)
+       res.send(req.user)
+       
     } catch (error) {
 
         res.status(400).send(error)
